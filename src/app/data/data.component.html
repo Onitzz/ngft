@@ -1,0 +1,21 @@
+<div class="contenair">
+  <input type="text" (input)="changeName($event)"/>
+  
+  <br/>
+  
+  <input type="text" [(ngModel)]="name"/>
+
+  {{ name }}
+
+  <form (submit)="addTask()">
+    <input name="task" type="text" [(ngModel)]="task.text"/>
+  </form>
+  <ul>
+    <li 
+    (click)="task.done = !task.done" 
+    *ngFor="let task of tasks" 
+    [ngClass]="{'task-done': task.done}">
+    {{ task.title }}</li>
+  </ul>
+
+</div>

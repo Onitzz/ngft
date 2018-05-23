@@ -1,0 +1,10 @@
+<div class="container">
+    <textarea 
+    [maxLength]= limit 
+    [style.color]= "color()"
+    class="form-control"
+    [(ngModel)]= "text"></textarea>
+    <div>
+        {{ text.length }}
+    </div>
+</div>

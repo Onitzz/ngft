@@ -1,4 +1,6 @@
 <div style="text-align:center">
+  <app-message></app-message>
+
   <app-aston></app-aston>
   
   <h1>
@@ -6,6 +8,11 @@
   </h1>
   <h2>{{ sayHello() }}</h2>
 
-  <input type="text" [(ngModel)]="email"> {{ email }}
+  <input type="text"
+  class="form-control" [(ngModel)]="email"> {{ email }}
+  <hr />
+
+  <app-data></app-data>
+
 </div>
 
