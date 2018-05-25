@@ -1,5 +1,6 @@
 <div style="text-align:center">
-  <app-message></app-message>
+  <app-message (response)="getText($event)" text="'Hello, world'" limit="20"></app-message>
+
 
   <app-aston></app-aston>
   

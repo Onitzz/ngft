@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
     selector: 'app-message',
@@ -11,10 +11,14 @@ import { Component } from '@angular/core';
 })
 
 export class MessageComponent{
-    limit = 12;
-    text:string="";
+    @Input() text: string = '';
+    @Input() limit: number=0;
+    @Output() response = new EventEmitter();
 
     color(){
         return this.text.length > this.limit - 10 ? "red" : "black";
+    }
+    sendMessage(){
+        this.response.emit(this.text);
     }
 }

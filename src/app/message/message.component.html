@@ -1,10 +1,11 @@
 <div class="container">
     <textarea 
     [maxLength]= limit 
-    [style.color]= "color()"
     class="form-control"
     [(ngModel)]= "text"></textarea>
-    <div>
+    <div
+    [style.color]= "color()">
         {{ text.length }}
     </div>
+    <button (click)="sendMessage()" class="btn btn-success">Send</button>
 </div>
